@@ -1,5 +1,4 @@
-FROM node:slim
-MAINTAINER Alex
+FROM node:6
 
 # Install git, sudo
 RUN apt-get -yq update && \
@@ -38,7 +37,7 @@ WORKDIR /app
 USER user
 
 # Expose the port
-EXPOSE 9000 3000 3001
+EXPOSE 9000 3000 3001 3002
 
 # Open bash by default
 CMD /bin/bash
